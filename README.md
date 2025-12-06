@@ -1,53 +1,63 @@
-<img src="https://github.com/thouhidrock143-pixel/health-monitoring-system/blob/main/health-2.png" width="100%" />
-# 🩺 Real-Time Health Monitoring & Data Analytics System  
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)  
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow?style=for-the-badge&logo=pandas)](https://pandas.pydata.org/)  
-[![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-orange?style=for-the-badge&logo=numpy)](https://numpy.org/)  
-[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit)](https://streamlit.io/)  
-[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-purple?style=for-the-badge&logo=plotly)](https://plotly.com/)  
+<!-- Banner -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thouhidrock143-pixel/health-monitoring-system/main/health-2.png" width="80%">
+</p>
 
-A complete health-data analytics project simulating and analyzing real-time vital signs (Heart Rate, Body Temperature, and SpO₂).  
-This system identifies anomalies, generates alerts, cleans data, and visualizes insights using an interactive Streamlit dashboard.  
+# 🩺 Real-Time Health Monitoring & Data Analytics System  
+
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow?style=for-the-badge&logo=pandas)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-orange?style=for-the-badge&logo=numpy)](https://numpy.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit)](https://streamlit.io/)
+[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-purple?style=for-the-badge&logo=plotly)](https://plotly.com/)
+
+A complete health-data analytics system simulating and analyzing real-time vital signs (Heart Rate, Temperature, SpO₂).  
+This system detects anomalies, generates alerts, cleans data, and visualizes insights using an interactive Streamlit dashboard.  
 Perfect for **Data Analyst portfolio**, **Healthcare Analytics**, or **IoT data simulation projects**.
 
 ---
 
 ## 🚀 Features  
 
-### 🔹 1. Real-Time Vital-Data Simulation  
-Generates realistic health data including:  
+### 🔹 1. Real-Time Vital Sign Simulation  
+Generates realistic health data:  
 - Heart Rate (BPM)  
 - Body Temperature (°C)  
 - Blood Oxygen (SpO₂ %)  
-Stored as: `data/raw_data.csv`
+
+**Saved as:** `data/raw_data.csv`
 
 ---
 
 ### 🔹 2. Data Cleaning & Preprocessing  
-- Removes impossible values  
-- Converts formats & handles missing values  
-- Calculates rolling averages  
-- Produces: `data/cleaned_data.csv`
+- Removes invalid values  
+- Fixes missing entries  
+- Creates rolling averages for smooth trends  
+- Standardizes all measurement fields  
+
+**Output:** `data/cleaned_data.csv`
 
 ---
 
 ### 🔹 3. Anomaly Detection  
-Flags dangerous health patterns:  
-- 🔥 **Fever** → Temperature > 38°C  
-- 💓 **High Heart Rate** → HR > 110 BPM  
-- 🫁 **Low SpO₂** → SpO₂ < 92%  
+Automatically flags abnormal patterns:  
+- 🔥 Fever → Temp > 38°C  
+- 💓 High HR → > 110 BPM  
+- 🫁 Low SpO₂ → < 92%  
 
 ---
 
-### 🔹 4. Interactive Dashboard (Streamlit)  
+### 🔹 4. Interactive Streamlit Dashboard  
 Visualizes:  
-- 📈 Heart Rate Trends  
-- 🌡 Temperature Trends  
-- 🩸 SpO₂ Levels  
-- ⚠ Real-Time Alerts Table  
+- Heart Rate Trend  
+- Temperature Trend  
+- SpO₂ Levels  
+- Live Alerts Table  
 
-Launches with:
----
+Run it using:
+
+streamlit run src/dashboard.py
+
 
 ## 🧠 Skills Demonstrated (For Data Analyst Roles)
 
