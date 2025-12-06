@@ -1,23 +1,30 @@
-import streamlit as st
+import os
 import pandas as pd
-import plotly.express as px
+import streamlit as st
+import subprocess
 
-st.title("🏥 Health Monitoring Analytics Dashboard")
+DATA_DIR = "data"
+RAW_FILE = f"{DATA_DIR}/raw_data.csv"
+CLEAN_FILE = f"{DATA_DIR}/cleaned_data.csv"
 
-df = pd.read_csv("data/cleaned_data.csv")
 
-st.subheader("📈 Heart Rate (BPM)")
-fig1 = px.line(df, x="timestamp", y="heart_rate")
-st.plotly_chart(fig1)
+# Auto-generate data if missing (important for Streamlit Cloud)
+if not os.path.exists(CLEAN_FILE):
+    st.warning("Generating data... (first-time setup)")
+    
+    # Run generate_data.py
+    subprocess.run(["python", "src/generate_data.py"])
 
-st.subheader("🌡 Body Temperature (°C)")
-fig2 = px.line(df, x="timestamp", y="temperature")
-st.plotly_chart(fig2)
+    # Run analyze_data.py
+    subprocess.run(["python", "src/analyze_data.py"])
 
-st.subheader("🩸 SpO₂ (%)")
-fig3 = px.line(df, x="timestamp", y="spo2")
-st.plotly_chart(fig3)
+# Load cleaned data
+df = pd.read_csv(CLEAN_FILE)
 
-st.subheader("⚠ Alerts")
-alert_df = df[df['alert'] != "Normal"]
-st.dataframe(alert_df)
+st.title("Real-Time Health Monitoring Dashboard")
+
+st.line_chart(df["heart_rate"])
+st.line_chart(df["temperature"])
+st.line_chart(df["spo2"])
+
+st.dataframe(df.tail(20))
