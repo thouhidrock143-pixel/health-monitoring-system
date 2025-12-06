@@ -58,17 +58,16 @@ Run it using:
 
 streamlit run src/dashboard.py
 
-
 ## 🧠 Skills Demonstrated (For Data Analyst Roles)
 
-| Skill Area | Description |
-|-----------|-------------|
-| **Data Cleaning** | Removing noise, handling invalid readings, fixing missing data |
-| **Time-Series Analysis** | Rolling averages, trend detection, baseline comparison |
-| **Exploratory Data Analysis** | Identifying patterns and anomalies |
-| **Visualization** | Plotly interactive graphs + Streamlit dashboard |
-| **Python Scripting** | Modular code for generation, analysis, dashboard |
-| **Healthcare Analytics** | Vital signs interpretation & alert logic |
+| Skill Area              | Description                                                          |
+|-------------------------|----------------------------------------------------------------------|
+| Data Cleaning           | Removing noise, handling invalid readings, fixing missing data       |
+| Time-Series Analysis    | Rolling averages, trend detection, baseline comparison              |
+| Exploratory Data Analysis | Identifying patterns and anomalies                                |
+| Visualization           | Plotly interactive graphs + Streamlit dashboard                     |
+| Python Scripting        | Modular code for generation, analysis, and dashboard                |
+| Healthcare Analytics    | Vital signs interpretation & alert logic                            |
 
 ---
 
@@ -96,13 +95,20 @@ health-monitoring-system/
 
 ---
 
-## ▶️ How to Run  
+## ▶️ How to Run 
 
 ### 1️⃣ Install dependencies
+pip install -r requirements.txt
 
 ### 2️⃣ Generate data
+python src/generate_data.py
 
 ### 3️⃣ Analyze & clean data
+python src/analyze_data.py
+
+### 4️⃣ Launch dashboard
+streamlit run src/dashboard.py
+
 
 ---
 
